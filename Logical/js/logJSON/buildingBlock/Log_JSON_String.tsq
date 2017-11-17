@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1441637482550" createdUser="Steve" id="-2cd55d9b:14fa70d9abc:-75c6" type="test_resource" updatedTimestamp="1443800299052" updatedUser="Steve" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-2cd55d9b:14fa70d9abc:-76bf" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="eval( textFileContent( tags[&quot;PROJECT/ROOT&quot;] + &quot;JS_Lib/LogJSON.js&quot;) );&#13;&#10;&#13;&#10;//Create the jsonStr tag data&#13;&#10;setLoggingTag(createLogJsonObject(tags[&quot;BBIn/LogMessage&quot;]), &quot;JsonLogString&quot;);" name="Run &quot;eval( textFileContent( tags[&quot;PROJECT/ROOT&quot;] + &quot;JS_Lib/LogJSON.js&quot;) );&#13;&#10;&#13;&#10;//Create the jsonStr tag data&#13;&#10;setLoggingTag(createLogJsonObject(tags[&quot;BBIn/LogMessage&quot;]), &quot;JsonLogString&quot;);&quot;"/>
+         </editableResource>
+         <editableResource id="-2cd55d9b:14fa70d9abc:-768b" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%JsonLogString%%" name="%%JsonLogString%%" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="SELECT" outputMode="SELECT">
+         <tag defaultValue="" description="" name="BBIn/LogMessage">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+            </tagProps>
+         </tag>
+         <tag defaultValue="" description="" name="JsonLogString">
+            <tagProps>
+               <prop key="interfaceOutput" value="true"/>
+               <prop key="scopeExecution" value="true"/>
+            </tagProps>
+         </tag>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

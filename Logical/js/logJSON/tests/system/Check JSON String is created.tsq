@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1441637008302" createdUser="Steve" id="-2cd55d9b:14fa70d9abc:-7703" type="test_resource" updatedTimestamp="1443800468975" updatedUser="Steve" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-2cd55d9b:14fa70d9abc:-76bf" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="eval( textFileContent( tags[&quot;PROJECT/ROOT&quot;] + &quot;JS_Lib/LogJSON.js&quot;) );&#13;&#10;&#13;&#10;// create the logging object&#13;&#10;var logMessage = &quot;Testing JSON string is created&quot;;&#13;&#10;setLoggingTag(createLogJsonObject(logMessage), &quot;jsonLogStr&quot;);" name="Run &quot;eval( textFileContent( tags[&quot;PROJECT/ROOT&quot;] + &quot;JS_Lib/LogJSON.js&quot;) );&#13;&#10;&#13;&#10;// create the logging object&#13;&#10;var logMessage = &quot;Testing JSON string is created&quot;;&#13;&#10;setLoggingTag(createLogJsonObject(logMessage), &quot;jsonLogStr&quot;);&quot;"/>
+         </editableResource>
+         <editableResource id="-2cd55d9b:14fa70d9abc:-768b" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%jsonLogStr%%" name="%%jsonLogStr%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="2e5135fe:150291e657f:-79df" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="var jsonString = tags[&quot;jsonLogStr&quot;];&#10;jsonString.indexOf(&quot;\&quot;Message\&quot;: \&quot;Testing JSON string is created\&quot;&quot;) &gt; -1;" option="OTHER" script="var jsonString = tags[&quot;jsonLogStr&quot;];&#10;jsonString.indexOf(&quot;\&quot;Message\&quot;: \&quot;Testing JSON string is created\&quot;&quot;) &gt; -1;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="result"/>
+         <tag defaultValue="" description="" name="jsonLogStr"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

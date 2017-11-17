@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1441635472101" createdUser="Steve" id="-2cd55d9b:14fa70d9abc:-7a52" type="test_resource" updatedTimestamp="1443799063954" updatedUser="Steve" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-2cd55d9b:14fa70d9abc:-7de7" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="eval( textFileContent( tags[&quot;PROJECT/ROOT&quot;] + &quot;JS_Lib/logJSON.js&quot;) );&#13;&#10;&#13;&#10;// create the logging object&#13;&#10;var logMessage = &quot;Testing Name element is set in testDetails array in JSON String&quot;;&#13;&#10;var logObj = createLogJsonObject(logMessage, &quot;true&quot;);&#13;&#10;&#13;&#10;var result = convertJSONToString(logObj);&#13;&#10;print (&quot;JSON String: &quot; + result);&#13;&#10;&#13;&#10;logObj.testDetails.Name == tags[&quot;TEST/NAME&quot;];&#13;&#10;&#13;&#10;" option="OTHER" script="eval( textFileContent( tags[&quot;PROJECT/ROOT&quot;] + &quot;JS_Lib/logJSON.js&quot;) );&#13;&#10;&#13;&#10;// create the logging object&#13;&#10;var logMessage = &quot;Testing Name element is set in testDetails array in JSON String&quot;;&#13;&#10;var logObj = createLogJsonObject(logMessage, &quot;true&quot;);&#13;&#10;&#13;&#10;var result = convertJSONToString(logObj);&#13;&#10;print (&quot;JSON String: &quot; + result);&#13;&#10;&#13;&#10;logObj.testDetails.Name == tags[&quot;TEST/NAME&quot;];&#13;&#10;&#13;&#10;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="result"/>
+         <tag defaultValue="" description="" name="jsonStr"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

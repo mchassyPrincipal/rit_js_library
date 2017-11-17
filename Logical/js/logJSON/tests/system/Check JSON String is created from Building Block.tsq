@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1441637522019" createdUser="Steve" id="-2cd55d9b:14fa70d9abc:-753a" type="test_resource" updatedTimestamp="1443800395178" updatedUser="Steve" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-2cd55d9b:14fa70d9abc:-749e" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="true" description="" executeparallel="false" name=" &quot;js/logJSON/buildingBlock/Log_JSON_String&quot; with BBIn/LogMessage(Log this message to the screen please!), store results in jsonLogStr(%%JsonLogString%%)" parentWaits="false" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="-2cd55d9b:14fa70d9abc:-75c6" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="Log_JSON_String" lkpath="js/logJSON/buildingBlock/Log_JSON_String"/>
+               <inbound>
+                  <binding key="BBIn/LogMessage" value="Log this message to the screen please!"/>
+               </inbound>
+               <outbound>
+                  <binding key="jsonLogStr" value="%%JsonLogString%%"/>
+               </outbound>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="2e5135fe:150291e657f:-7b85" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="var jsonString = tags[&quot;jsonLogStr&quot;];&#10;jsonString.indexOf(&quot;\&quot;Message\&quot;: \&quot;Log this message to the screen please!\&quot;&quot;) &gt; -1;" option="OTHER" script="var jsonString = tags[&quot;jsonLogStr&quot;];&#10;jsonString.indexOf(&quot;\&quot;Message\&quot;: \&quot;Log this message to the screen please!\&quot;&quot;) &gt; -1;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="jsonLogStr"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>
